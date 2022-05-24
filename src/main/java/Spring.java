@@ -77,10 +77,10 @@ public class Spring {
     }
 
     public Spring inSeries(Spring that){
-
+        return new Spring((this.k * that.k) / (this.k + that.k));
     }
     public Spring inParallel(Spring that){
-
+        return new Spring(this.k + that.k);
     }
 
     private double[] solveEquation(double a, double b, double c, double d, double e, double f){
