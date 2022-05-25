@@ -18,13 +18,13 @@ public class Spring {
     }
 
     public double[] move(double t, double dt, double x0, double v0){
-        int k = 0;
+        int i = 0;
         double A = v0;
         double B = x0;
         double omega = Math.sqrt(k);
         double coor[] = new double[(int)t / (int)dt];
         for(double tx = 0; tx < t; tx+= dt){
-            coor[k++] = A * Math.sin(omega*tx) + B * Math.cos(omega*tx);
+            coor[i++] = A * Math.sin(omega*tx) + B * Math.cos(omega*tx);
         }
         return coor;
     }

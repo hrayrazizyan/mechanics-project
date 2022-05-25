@@ -29,6 +29,10 @@ public class Converter {
     }
 
     private int computeDecimal(FFT.Complex[] fft){
+        double t[] = new double[8];
+        for(int i = 0; i < fft.length; i++){
+            t[i] = Math.sqrt(Math.pow(fft[i].re(), 2) + Math.pow(fft[i].im(), 2));
+        }
         return 0;
     }
 
