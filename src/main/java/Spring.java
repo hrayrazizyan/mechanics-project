@@ -23,7 +23,7 @@ public class Spring {
         double B = x0;
         double omega = Math.sqrt(k);
         double coor[] = new double[(int)t / (int)dt];
-        for(double tx = 0; tx <= t; tx+= dt){
+        for(double tx = 0; tx < t; tx+= dt){
             coor[k++] = A * Math.sin(omega*tx) + B * Math.cos(omega*tx);
         }
         return coor;
